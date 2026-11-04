@@ -1,0 +1,10 @@
+{
+  "manifest": 1,
+  "version": "1.0.0",
+  "name": { "en": "Dusk Murmuration" },
+  "description": { "en": "One great flock of starlings over a reedbed, under a winter dusk that deepens into night. Glossy birds that flash as they turn together. Now and then a falcon." },
+  "author": "Catherine & Claude",
+  "license": "MIT",
+  "homepage": "https://github.com/marelucent/quiet-skies",
+  "uses": ["level"]
+}
