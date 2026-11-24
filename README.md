@@ -10,13 +10,17 @@ One great flock of starlings over a reedbed, under a winter dusk that deepens in
 
 Measured at about 25% of one core on a 2022 LG C2 (webOS 9), a little over Glasshouse's own target of 20%. Six versions were shaped in one evening by a pair of eyes on the sofa saying "more like birds, less like flies".
 
-*Screenshot to follow.*
+![Dusk Murmuration: a flock of starlings over a reedbed under a deepening dusk sky](screenshots/dusk-murmuration.png)
 
 ## Window Sky
 
 The TV as a window: the real night sky behind the living-room wall, right now, computed from the TV's clock. Bright stars and constellations where they truly are, the Moon in its real phase, the Milky Way, live cloud, rain and mist from Open-Meteo, and the odd satellite, meteor and passing aircraft.
 
 It also watches space weather. A line in the corner gives the planetary Kp index and the solar wind speed from NOAA's Space Weather Prediction Center, and a small strip of drifting motes beside it shows the solar wind as a gauge: the faster the wind, the faster they stream. When Kp climbs, aurora appears low in the north in two steps. First a faint glow, captioned "aurora further north, not visible from here". Above a second threshold, the full curtain with rays, which ripples faster in a fast solar wind. It hides in twilight and behind real cloud.
+
+![Window Sky looking north-east from Greenwich under a full Moon, with constellations, a treeline and green aurora low in the north](screenshots/window-sky-aurora-preview.png)
+
+*Captured from the TV itself on 24 November 2026: the real stars and full Moon for that minute, with the aurora previewed at a pretend Kp of 7.5. A preview shows a clear sky; the real evening was overcast, as the caption admits.*
 
 Four lines at the top of `main.qml` make it your sky. The example is Greenwich, looking south:
 
