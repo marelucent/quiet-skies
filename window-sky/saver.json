@@ -1,0 +1,16 @@
+{
+  "manifest": 1,
+  "version": "0.5.0",
+  "name": {
+    "en": "Window Sky"
+  },
+  "description": {
+    "en": "The TV as a window: the real night sky behind your wall, right now. Bright stars and constellations where they truly are, the Moon in its real phase, the Milky Way, live weather, and the odd satellite, meteor and aircraft. Space weather from NOAA, with aurora low in the north when the real Kp index calls for it."
+  },
+  "author": "Ross, Catherine & Claude",
+  "license": "MIT",
+  "homepage": "https://github.com/marelucent/quiet-skies",
+  "uses": [
+    "level"
+  ]
+}

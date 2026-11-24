@@ -12,19 +12,24 @@ Measured at about 25% of one core on a 2022 LG C2 (webOS 9), a little over Glass
 
 *Screenshot to follow.*
 
-## Window Sky *(coming once its co-author has said yes)*
+## Window Sky
 
 The TV as a window: the real night sky behind the living-room wall, right now, computed from the TV's clock. Bright stars and constellations where they truly are, the Moon in its real phase, the Milky Way, live cloud, rain and mist from Open-Meteo, and the odd satellite, meteor and passing aircraft.
 
-Three lines at the top of `main.qml` make it your sky. The example below is Greenwich:
+It also watches space weather. A line in the corner gives the planetary Kp index and the solar wind speed from NOAA's Space Weather Prediction Center, and a small strip of drifting motes beside it shows the solar wind as a gauge: the faster the wind, the faster they stream. When Kp climbs, aurora appears low in the north in two steps. First a faint glow, captioned "aurora further north, not visible from here". Above a second threshold, the full curtain with rays, which ripples faster in a fast solar wind. It hides in twilight and behind real cloud.
+
+Four lines at the top of `main.qml` make it your sky. The example is Greenwich, looking south:
 
 ```
-property real lat: 51.48        // your latitude
-property real lon: 0.00         // your longitude, east positive
-property real azCentre: 180     // the compass direction the TV "faces" from the sofa (0 N, 90 E, 180 S, 270 W)
+property real lat: 51.48            // your latitude
+property real lon: 0.00             // your longitude, east positive
+property real azCentre: 180         // the compass direction the TV "faces" from the sofa (0 N, 90 E, 180 S, 270 W)
+property string place: "Greenwich"  // the name shown in the corner caption
 ```
 
-It reaches the network (Open-Meteo, no key, every ten minutes), so Glasshouse will note that under its name in the list. If you'd rather it didn't, delete the `fetchWeather` call and the sky stays clear.
+Three more are worth a look: `auroraKp` (the Kp at which aurora could really be seen from your latitude; 6 suits southern England), `auroraHintKp` (where the faint glow begins) and `cityGlowAz` (the direction of a city's glow on your horizon, or -1 for none). Set `swTestKp` to a number such as 8 to preview the aurora, then back to -1.
+
+It reaches the network: Open-Meteo every ten minutes for the weather at your coordinates, and NOAA every fifteen for space weather. Neither needs a key, and Glasshouse will note the network use under its name in the list. If you'd rather it didn't, delete the `fetchWeather` and `fetchSpace` calls at the bottom of the file and the sky stays clear and quiet.
 
 ## Installing
 
